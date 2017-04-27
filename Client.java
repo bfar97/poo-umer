@@ -15,7 +15,7 @@ public class Client extends User{
     private ArrayList<Viagens> viagens;
 
 
-    public User() {
+    public Client() {
     
     }
 
