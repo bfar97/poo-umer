@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=int\ getSpeed()
+comment0.text=getters\ setters\ *
+comment1.params=speed
+comment1.target=void\ setSpeed(int)
+comment2.params=
+comment2.target=int\ getPrice()
+comment3.params=price
+comment3.target=void\ setPrice(int)
+comment4.params=
+comment4.target=int\ getFactor()
+comment5.params=factor
+comment5.target=void\ setFactor(int)
+comment5.text=enquanto\ n\u00E3o\ randomizamos,\ factor\ set\ to\ 100*
+comment6.params=
+comment6.target=boolean\ getWaitlistStatus()
+comment7.params=status
+comment7.target=void\ setWaitlistStatus(boolean)
+numComments=8
