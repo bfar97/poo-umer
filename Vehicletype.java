@@ -14,7 +14,7 @@ public class Vehicletype extends Vehicle {
    
    public Vehicletype() {
        lugares = 5;
-       matricula = "11-BB-00";
+       matricula = "11-BB-11";
    }
    
    public Vehicletype(int lugares, String matricula) {
