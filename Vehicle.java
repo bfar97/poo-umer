@@ -13,6 +13,28 @@ public class Vehicle {
    private int reliabilityFactor;
    private boolean waitlistStatus;
    
+   /** Contrutores **/
+   
+   public Vehicle() {
+       speedPkm = 0;
+       pricePkm = 0;
+       reliabilityFactor = 100;
+       waitlistStatus = true;
+   }
+   
+   public Vehicle(int speedPkm, int pricePkm, int reliabilityFactor, boolean waitlistStatus) {
+       this.speedPkm = speedPkm;
+       this.pricePkm = pricePkm;
+       this.reliabilityFactor = reliabilityFactor;
+       this.waitlistStatus = waitlistStatus;
+   }
+   
+   public Vehicle(Vehicle car) {
+       speedPkm = car.speedPkm;
+       pricePkm = car.pricePkm;
+       reliabilityFactor = car.reliabilityFactor;
+       waitlistStatus = car.waitlistStatus;
+   }
    
    /**getters setters **/
    public int getSpeed() {
