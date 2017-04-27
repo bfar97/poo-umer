@@ -4,9 +4,9 @@ Tell the reader (someone who does not know anything about this project)
 all he/she needs to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: PROJECTO DE POO UMER
+PURPOSE OF PROJECT: PASSAR À CADEIRA
+VERSION or DATE: BETA
+HOW TO START THIS PROJECT: JUST RUN IT BITCH
+AUTHORS: BERNARDO E CESAR.... E TIAGO
+USER INSTRUCTIONS: GET OUT
