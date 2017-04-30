@@ -5,6 +5,7 @@
  * @author (seu nome) 
  * @version (número de versão ou data)
  */
+/**
 <<<<<<< HEAD
 public class Viagens {
     
@@ -20,3 +21,4 @@ public class Viagens
 >>>>>>> origin/master
 
 }
+**/

@@ -10,52 +10,21 @@ public class Vehicle {
     
    // Variaveis de instancia //
    private static String matricula;
-   private static Vehicletype type;
+   private VehicleType type;
    private Ponto2D position;
    private Driver driver;
-
-   public Vehicle() {
-       matricula = "N/A";
-       type = 
-   }
    
-   public Vehicle(int speedPkm, int pricePkm, int reliabilityFactor, boolean waitlistStatus) {
-       this.speedPkm = speedPkm;
-       this.pricePkm = pricePkm;
-       this.reliabilityFactor = reliabilityFactor;
-       this.waitlistStatus = waitlistStatus;
+   public Vehicle(String matr, VehicleType type, double posX, double posY, Driver driver) {
+       this.matricula = matr;
+       this.type = type;
+       this.position = new Ponto2D(posX, posY);
+       this.driver = driver;
    }
    
    public Vehicle(Vehicle car) {
-       speedPkm = car.speedPkm;
-       pricePkm = car.pricePkm;
-       reliabilityFactor = car.reliabilityFactor;
-       waitlistStatus = car.waitlistStatus;
+       matricula = car.matricula;
+       type = car.type;
+       position = car.position;
+       driver = car.driver;
    }
-   
-
-   
-
-   
-   public boolean getWaitlistStatus() {
-       return this.waitlistStatus;
-   }
-   
-   public void setWaitlistStatus(boolean status) {
-       this.waitlistStatus = status;
-   }
-   
-   public Vehicle clone() {
-       return new Vehicle(this);
-   }
-   
-   public boolean equals(Object x) {
-       if(this == x)
-            return true;
-       if((x == null) || (this.getClass() != x.getClass()))
-            return false;
-       Vehicle k = (Vehicle) x;
-       return (
-   }
-   
 }

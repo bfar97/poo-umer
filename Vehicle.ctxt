@@ -1,3 +1,8 @@
 #BlueJ class context
 comment0.target=Vehicle
-numComments=1
+comment0.text=\n\ Write\ a\ description\ of\ class\ Vehicle\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=matr\ type\ posX\ posY\ driver
+comment1.target=Vehicle(java.lang.String,\ VehicleType,\ double,\ double,\ Driver)
+comment2.params=car
+comment2.target=Vehicle(Vehicle)
+numComments=3
