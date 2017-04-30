@@ -68,4 +68,15 @@ public class Vehicle {
    public void setDriver(Driver driver) {
        this.driver = driver;
    }
+   
+   public Vehicle clone() {
+       return new Vehicle(this);
+   }
+   
+   public String toString() {
+       return("Matricula: " +  this.matricula + 
+              "\nTipo: " + this.type.toString() + 
+              "\nPosition: " + this.position.toString() + 
+              "\nDriver: " + this.driver.toString());
+    }
 }

@@ -47,4 +47,10 @@ public enum VehicleType {
         return this.reliabilityFactor;
     }
     
+    public String toString() {
+        return("Seats: " + this.seats + 
+               "\nSpeed" + this.speedPkm + 
+               "\nPrice per km: " + this.pricePkm + 
+               "\nReliability Factor");
+    }
 }
