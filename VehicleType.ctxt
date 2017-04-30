@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=VehicleType
+comment1.params=lugares\ speed\ price\ reliabilityFactor
+comment1.target=VehicleType(int,\ int,\ int,\ int)
+comment1.text=Construtores\ *
+numComments=2

@@ -5,6 +5,7 @@
  * @author (seu nome) 
  * @version (número de versão ou data)
  */
+import java.util.ArrayList;
 public class Teste
 {
     public static void main(String[] args) {
@@ -15,9 +16,10 @@ public class Teste
         int dB = 7;
         int mB = 11;
         int yB = 95;
+        ArrayList<Viagem> k = new ArrayList<Viagem>();
     
-        User k = new User(email, nome, password, adress, dB, mB, yB);
+        User w = new User(email, nome, password, adress, dB, mB, yB, k);
         
-        System.out.print(k.toString());
+        System.out.print(w.toString());
     }    
 }

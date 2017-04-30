@@ -9,7 +9,7 @@
 /**
  * Pontos descritos como 2 coordenadas reais.
  */
-import static java.lang.Math.abs;
+import java.lang.Math;
 public class Ponto2D {
     
     // Variáveis de Instância
@@ -31,9 +31,25 @@ public class Ponto2D {
         y = p.getY();
     }
     
-    // Métodos de Instância
+    // Getter's
     public double getX() { return x; }
     public double getY() { return y; }
+    
+    // Setter's
+    public void setX(double cx) {
+        this.x = cx;
+    }
+    
+    public void setY(double cy) {
+        this.y = cy;
+    }
+    
+    public void setXY(double cx, double cy) {
+        this.setX(cx);
+        this.setY(cy);
+    }
+    
+    // Metodos adicionais
     
     /** Incremento de coordenadas */
     public void incCord(double dx, double dy) {
@@ -58,6 +74,16 @@ public class Ponto2D {
         return new Ponto2D(x + dx, y + dy);
     }
     
+    /** calcula a distancia do ponto k - this */
+    public double Dist(Ponto2D k) {
+        double a = this.getX() - k.getX();
+        double b = this.getY() - k.getY();
+        
+        return (Math.sqrt(Math.pow(a, 2.0) + Math.pow(b, 2.0)));
+    }
+    
+    //Metodos Importantes
+    
     public boolean equals(Object x) {
         if(this == x)
             return true;
@@ -70,7 +96,7 @@ public class Ponto2D {
     }    
     
     public String toString() {
-        return new String("Pt2D = " + x + ", " + y);
+        return new String("( " + x + ", " + y + ")\n");
     }
     
     public Ponto2D clone() {

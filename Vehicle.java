@@ -5,21 +5,18 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+
 public class Vehicle {
     
    // Variaveis de instancia //
-   private int speedPkm;
-   private int pricePkm;
-   private int reliabilityFactor;
-   private boolean waitlistStatus;
-   
-   /** Contrutores **/
-   
+   private static String matricula;
+   private static Vehicletype type;
+   private Ponto2D position;
+   private Driver driver;
+
    public Vehicle() {
-       speedPkm = 0;
-       pricePkm = 0;
-       reliabilityFactor = 100;
-       waitlistStatus = true;
+       matricula = "N/A";
+       type = 
    }
    
    public Vehicle(int speedPkm, int pricePkm, int reliabilityFactor, boolean waitlistStatus) {
@@ -36,30 +33,9 @@ public class Vehicle {
        waitlistStatus = car.waitlistStatus;
    }
    
-   /**getters setters **/
-   public int getSpeed() {
-       return this.speedPkm;
-   }
+
    
-   public void setSpeed(int speed) {
-       this.speedPkm = speed;
-   }
-   
-   public int getPrice() {
-       return this.pricePkm;
-   }
-   
-   public void setPrice(int price) {
-       this.pricePkm = price;
-   }
-   
-   public int getFactor() {
-       return this.reliabilityFactor;
-   }
-   /** enquanto não randomizamos, factor set to 100**/
-   public void setFactor(int factor) {
-       this.reliabilityFactor = 100;
-   }
+
    
    public boolean getWaitlistStatus() {
        return this.waitlistStatus;
@@ -68,4 +44,18 @@ public class Vehicle {
    public void setWaitlistStatus(boolean status) {
        this.waitlistStatus = status;
    }
+   
+   public Vehicle clone() {
+       return new Vehicle(this);
+   }
+   
+   public boolean equals(Object x) {
+       if(this == x)
+            return true;
+       if((x == null) || (this.getClass() != x.getClass()))
+            return false;
+       Vehicle k = (Vehicle) x;
+       return (
+   }
+   
 }
