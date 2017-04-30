@@ -106,10 +106,6 @@ public class Driver extends User {
     public Driver clone() {
         return new Driver(this);
     }
-    
-    public boolean equals(Object x) {
-        return(super.equals(x));
-    }
         
     public String toString() {
         return(super.toString() + "\nVeiculo: " + this.vehicle.toString() +
