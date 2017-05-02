@@ -9,7 +9,7 @@
 public class Vehicle {
     
    // Variaveis de instancia //
-   private static String matricula;
+   private final String matricula;
    private VehicleType type;
    private Ponto2D position;
    private Driver driver;
@@ -29,10 +29,10 @@ public class Vehicle {
    }
    
    public Vehicle(Vehicle car) {
-       matricula = car.matricula;
-       type = car.type;
-       position = car.position;
-       driver = car.driver;
+       matricula = car.getMatricula();
+       type = car.getType();
+       position = car.getPosition();
+       driver = car.getDriver();
    }
    
    /** Getters **/
@@ -52,11 +52,7 @@ public class Vehicle {
        return this.driver;
    }
    
-   /** Setters **/
-   public void setMatricula(String matr) {
-       this.matricula = matr;
-   }
-   
+   /** Setters */
    public void setType(VehicleType type) {
        this.type = type;
    }

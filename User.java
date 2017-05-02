@@ -51,7 +51,7 @@ public class User {
         this.dofBirth = k.getDofB();
         this.mofBirth = k.getMofB();
         this.yofBirth = k.getYofB();
-        this.trips = k.trips;
+        this.trips = k.getTrips();
     }
     
     // Getter's
