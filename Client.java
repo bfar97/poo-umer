@@ -10,36 +10,24 @@
 import java.util.ArrayList;
 public class Client extends User{
 
-    /** variaveis de instancia de um utlizador */
+    // variaveis de instancia de um utlizador
     private Ponto2D position;
 
 
     public Client() {
+        super();
         this.position = new Ponto2D();
     }
     
     public Client(String email, String nome, String password, String adress, int dofB, int mofB,
     int yofB, ArrayList<Viagem> k, double x, double y) {
-        this.setEmail(email);
-        this.setNome(nome);
-        this.setPword(password);
-        this.setAdress(adress);
-        this.setDofB(dofB);
-        this.setMofB(mofB);
-        this.setYofB(yofB);
-        this.setTrips(k);
+        super(email, nome, password, adress, dofB, mofB, yofB, k);
         this.position = new Ponto2D(x, y);
     }
     
     public Client(Client c) {
-        this.setEmail(c.getEmail());
-        this.setNome(c.getNome());
-        this.setPword(c.getPword());
-        this.setAdress(c.getAdress());
-        this.setDofB(c.getDofB());
-        this.setMofB(c.getMofB());
-        this.setYofB(c.getYofB());
-        this.position = c.position;
+        super(c); 
+        this.position = c.getPosition();
     }
     
     // Getter's
@@ -62,6 +50,15 @@ public class Client extends User{
     
     public String toString() {
         return(super.toString() + "\n" + this.position.toString());
+    }
+    
+    public boolean equals(Object x) {
+        if(this == x)
+            return true;
+        if((x == null) || (this.getClass() != x.getClass()))
+            return false;
+        Client k = (Client) x;
+        return((this.getNome().equals(k.getNome()) || this.getEmail().equals(k.getEmail())));
     }
     
     public Client clone() {

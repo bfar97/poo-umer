@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class Driver extends User {
     
     // variaveis de instancia
-    private Vehicle vehicle;
     private float gcumprimento;
     private int rating;
     private double kms;
@@ -18,24 +17,17 @@ public class Driver extends User {
     
     // Construtores
     public Driver() {
-        this.vehicle = new Vehicle();
-        this.gcumprimento = (float) 0.0;
-        this.rating = 0;
-        this.kms = 0.0;
-        this.working = false;
+        super();
+        gcumprimento = (float) 0.0;
+        rating = 0;
+        kms = 0.0;
+        working = false;
     }
     
-    public Driver(String email, String nome, String password, String adress, int dofB, int mofB,
-    int yofB, ArrayList<Viagem> k, Vehicle car, float gcump, int rating, double kms, boolean work) {
-        this.setEmail(email);
-        this.setNome(nome);
-        this.setPword(password);
-        this.setAdress(adress);
-        this.setDofB(dofB);
-        this.setMofB(mofB);
-        this.setYofB(yofB);
-        this.setTrips(k);
-        this.vehicle = car;
+    public Driver(String email, String nome, String password, String adress, int dofB, 
+    int mofB, int yofB, ArrayList<Viagem> k, float gcump, int rating, double kms,
+    boolean work) {
+        super(email, nome, password, adress, dofB, mofB, yofB, k);
         this.gcumprimento = gcump;
         this.rating = rating;
         this.kms = kms;
@@ -43,15 +35,7 @@ public class Driver extends User {
     }
     
     public Driver(Driver c) {
-        this.setEmail(c.getEmail());
-        this.setNome(c.getNome());
-        this.setPword(c.getPword());
-        this.setAdress(c.getAdress());
-        this.setDofB(c.getDofB());
-        this.setMofB(c.getMofB());
-        this.setYofB(c.getYofB());
-        this.setTrips(c.getTrips());
-        this.vehicle = c.getVehicle();
+        super(c);
         this.gcumprimento = c.getGcump();
         this.rating = c.getRating();
         this.kms = c.getKms();
@@ -59,11 +43,6 @@ public class Driver extends User {
     } 
     
     // Getter's
-    
-    public Vehicle getVehicle() {
-        return vehicle;
-    }
-    
     public float getGcump() {
         return gcumprimento;
     }
@@ -81,11 +60,6 @@ public class Driver extends User {
     }
     
     // Setter's
-    
-    public void setVehicle(Vehicle car) {
-        this.vehicle = car;
-    }
-    
     public void setGcump(float gc) {
         this.gcumprimento = gc;
     }
@@ -108,9 +82,9 @@ public class Driver extends User {
     }
         
     public String toString() {
-        return(super.toString() + "\nVeiculo: " + this.vehicle.toString() +
-        "\nGrau de Cumprimento: " + this.gcumprimento + "\nRating: " + this.rating +
-        "\n Quilometros: " + this.kms + "\nA Trabalhar: " + this.working);   
+        return(super.toString() + "\nGrau de Cumprimento: " + this.gcumprimento + 
+        "\nRating: " + this.rating + "\n Quilometros: " + this.kms + 
+        "\nA Trabalhar: " + this.working);   
     }
     
 }
