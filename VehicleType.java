@@ -88,4 +88,18 @@ public class VehicleType extends Vehicle {
                "\nPrice per km: " + this.pricePkm + 
                "\nReliability Factor");
     }
+    
+    public boolean equals(Object k) {
+        if(this == k)
+            return true;
+        if((k == null) || (this.getClass() != k.getClass()))
+            return false;
+        VehicleType x = (VehicleType) k;
+        return(this.getMatricula().equals(x.getMatricula()));
+    }
+    
+    public VehicleType clone() {
+        return new VehicleType(this);
+    }
+
 }

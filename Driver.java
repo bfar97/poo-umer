@@ -80,6 +80,15 @@ public class Driver extends User {
     public Driver clone() {
         return new Driver(this);
     }
+    
+    public boolean equals(Object x) {
+        if(this == x)
+            return true;
+        if((x == null) || (this.getClass() != x.getClass()))
+            return false;
+        Driver k = (Driver) x;
+        return(this.getEmail().equals(k.getEmail()) || this.getNome().equals(k.getNome()));
+    }
         
     public String toString() {
         return(super.toString() + "\nGrau de Cumprimento: " + this.gcumprimento + 
