@@ -87,9 +87,8 @@ public class Viagem {
     } 
         
     public String toString() {
-        return("Local de Partida: " + this.lPartida.toString() + "\nCoordenadas: "
-               + this.cPartida.toString() + "Local de Chegada: " + this.lChegada.toString() +
-               "\nCoordenadas: " + this.cChegada.toString());
+        return("Local de Partida: " + this.lPartida.toString() +
+        " | Local de Chegada: " + this.lChegada.toString());
     }
     
     public Viagem clone() {

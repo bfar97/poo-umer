@@ -5,7 +5,7 @@ all he/she needs to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
 PROJECT TITLE: PROJECTO DE POO UMER
-PURPOSE OF PROJECT: PASSAR À CADEIRA
+PURPOSE OF PROJECT: PASSAR A CADEIRA
 VERSION or DATE: BETA
 HOW TO START THIS PROJECT: JUST RUN IT BITCH
 AUTHORS: BERNARDO E CESAR.... E TIAGO
